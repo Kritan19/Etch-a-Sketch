@@ -14,4 +14,5 @@ rangeInput.addEventListener("input", function() {
     const value = this.value;
     const result = `${value}x${value}`;
     output.textContent = result;
+    createGrid(value , value);
 });
