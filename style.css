@@ -8,18 +8,53 @@
 }
 #main{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 80px;
+    
 }
-#container {
+#grid-container {
     display: grid;
+    grid-template-columns: repeat(16 , 1fr);
+    grid-template-rows: repeat(16, 1fr);
     height: 500px;
-    width: 960px;
-    grid-template-columns: repeat(auto-fill, 20px);
-    border: 2px solid black;
-    border-radius: 4px;
-    gap: 1px;
+    width: 600px; 
+    border: 3px solid #000;
+    border-radius: 5px;
+}
+
+.cell {
+    background-color: lightgray; /* Adjust cell styles as needed */
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+/* Add a hover effect */
+button:hover {
+    background-color: #2980b9;
 }
 footer{
     text-align: center;
